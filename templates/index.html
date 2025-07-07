@@ -56,10 +56,10 @@
         <button id="closeBtnDownload" class="exitButton">Close</button>
     </dialog>
 
-    <!-- <dialog id="tutorialDialog" class="tutorial">
+    <dialog id="tutorialDialog" class="tutorial">
         <h4>HOW TO EXPORT FLASHCARDS FROM QUIZLET</h4>
         <button id="closeTutBtn" class="exitButton">Close</button>
-    </dialog> -->
+    </dialog>
 
     <script>
          // Get popup flags from Flask
@@ -76,12 +76,12 @@
         if (downloadPopup) {
             dialogDownload.showModal();
         }
-        // const exportButton = document.getElementById('export');
+        const exportButton = document.getElementById('export');
 
-        // exportButton.addEventListener('click', () => {
-        //     console.log('Clicked');
-        //     dialogTutorial.showModal();
-        // });
+        exportButton.addEventListener('click', () => {
+            console.log('Clicked');
+            dialogTutorial.showModal();
+        });
 
         document.getElementById('closeBtn').onclick = () => dialogError.close();
         document.getElementById('closeBtnDownload').onclick = () => dialogDownload.close();

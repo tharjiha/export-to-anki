@@ -155,7 +155,7 @@ dialog[open] {
     gap: 160px;
 }
 
-.tutorial {
+.tutorial[open]{
   width: 80%;
   height: 80%;
   background-color: black;
