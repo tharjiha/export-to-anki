@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/type" href="static/images/anki-icon.png">
+    <title>exportToANKI</title>
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <h1>exportToANKI</h1>
+    <div class="stuff">
+        <div class="ontopoftext">
+            <button class="exportButton" id="export" style="margin-left: 0; margin-right: auto;">
+                Exporting Flashcards Steps
+            </button>
+            <button class="pasteButton" id="pasteBtn">
+                <img src="/static/images/paste.png" style="width:80%; height:80%;">
+            </button>
+        </div>
+        <form action="/submit" method="POST" class="cardForm">
+                <textarea name="user_text" id='user_text' placeholder="Enter Quizlet Export..." rows="27" cols="100" class="textarea"></textarea>
+                
+                <div class="formActions">
+                    <input type="submit" value="CREATE" class="createButton">
+
+                    <label>
+                        <input type="radio" name="cardType" value="basic" checked>
+                        Basic
+                    </label><br>
+
+                    <label>
+                        <input type="radio" name="cardType" value="cloze">
+                        Cloze
+                    </label><br>
+
+                    <label>
+                        <input type="radio" name="cardType" value="clozeflipped">
+                        Cloze Advanced
+                    </label>
+                </div>
+                
+                
+        </form>
+    </div>
+
+    <dialog id="dialogError" class="error">
+        <img src="/static/images/x.png" style="width:10%; height:10%;">
+        <p>wrong format</p>
+        <button id="closeBtn" class="exitButton">Close</button>
+    </dialog>
+
+    <dialog id="downloadDialog" class="downloadDialog">
+        <a href="/download">
+            <button id="download" class="createButton">DOWNLOAD</button>
+        </a>
+        <button id="closeBtnDownload" class="exitButton">Close</button>
+    </dialog>
+
+    <!-- <dialog id="tutorialDialog" class="tutorial">
+        <h4>HOW TO EXPORT FLASHCARDS FROM QUIZLET</h4>
+        <button id="closeTutBtn" class="exitButton">Close</button>
+    </dialog> -->
+
+    <script>
+         // Get popup flags from Flask
+        const showPopup = "{{ show_popup }}".toLowerCase() === "true";
+        const downloadPopup = "{{ download_popup }}".toLowerCase() === "true";
+
+        const dialogError = document.getElementById('dialogError');
+        const dialogDownload = document.getElementById('downloadDialog');
+        const dialogTutorial = document.getElementById('tutorialDialog');
+
+        if (showPopup) {
+            dialogError.showModal();
+        }
+        if (downloadPopup) {
+            dialogDownload.showModal();
+        }
+        // const exportButton = document.getElementById('export');
+
+        // exportButton.addEventListener('click', () => {
+        //     console.log('Clicked');
+        //     dialogTutorial.showModal();
+        // });
+
+        document.getElementById('closeBtn').onclick = () => dialogError.close();
+        document.getElementById('closeBtnDownload').onclick = () => dialogDownload.close();
+        document.getElementById('closeTutBtn').onclick = () => dialogTutorial.close();
+        document.getElementById('closeBtn').onclick = () => window.location.href = "{{ url_for('home') }}";
+    </script>
+
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>

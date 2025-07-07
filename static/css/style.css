@@ -1,0 +1,178 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+.stuff {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* <- this centers content horizontally */
+  gap: 10px;
+}
+
+.exportButton{
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    border-color: #3bbaf6;
+    border-width: 3px;
+    border-radius: 10px;
+    color:#3bbaf6;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    width: 300px;
+}
+
+.exportButton:hover{
+    background-color: #3bbaf6;
+    color: black;
+}
+
+.createButton {
+    background-color: #3bbaf6;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 30px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.createButton:hover {
+    background: linear-gradient(90deg, #3bbaf6,#98CDF1);
+}
+
+textarea{
+    background-color: transparent;
+    color: rgb(203, 201, 201);
+    border: 1px solid rgb(203, 201, 201);
+    border-radius: 10px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    resize: vertical; /* or none / both / horizontal */
+}
+
+.cardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px; /* optional */
+}
+
+.formActions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between button and radios */
+}
+
+dialog {
+  opacity: 0;
+  display: none;
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.error {
+  background-color: black;
+  border: 2px solid #3bbaf6;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  padding: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 200px; 
+  margin: auto; /* center the dialog */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.exitButton{
+    background-color: transparent;
+    color: #3bbaf6;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    border-color: #3bbaf6;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.downloadDialog[open]{
+    background-color: black;
+    border-color: #3bbaf6;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pasteButton{
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+.pasteButton:hover{
+    background-color:  #3bbaf6;
+}
+
+.ontopoftext {
+    display: flex;
+    flex-direction: row;
+    gap: 160px;
+}
+
+.tutorial {
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  color: white;
+  border: 2px solid #3bbaf6;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1000;
+  text-align: left;
+}
