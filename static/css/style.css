@@ -155,7 +155,7 @@ dialog[open] {
     gap: 160px;
 }
 
-.tutorial[open]{
+.tutorial[open] {
   width: 80%;
   height: 80%;
   background-color: black;
@@ -163,16 +163,29 @@ dialog[open] {
   border: 2px solid #3bbaf6;
   border-radius: 12px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   font-family: Helvetica, sans-serif;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+  align-items: center;      /* horizontal centering */
+  justify-content: flex-start;  /* align items to top for scroll */
+  gap: 0px;
   animation: fadeIn 0.3s ease-in-out;
   z-index: 1000;
-  text-align: left;
+  overflow-y: auto; 
+}
+
+h3{
+  color:#3bbaf6;
+}
+
+.warning {
+  background: #ffe6e6;
+  border-left: 4px solid #cc0000;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: #cc0000;
+  font-weight: bold;
 }

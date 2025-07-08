@@ -57,9 +57,36 @@
     </dialog>
 
     <dialog id="tutorialDialog" class="tutorial">
-        <h4>HOW TO EXPORT FLASHCARDS FROM QUIZLET</h4>
+        <h2>HOW TO EXPORT FLASHCARDS FROM QUIZLET</h2>
+
+        <div class="warning">
+            WARNING: Quizlet exports do not include images from your flashcard sets.
+        </div>
+
+        <h3>Step 1: Access Your Quizlet Deck</h3>
+        <p>Go to the Quizlet set you want to export to Anki.</p>
+        <img src="/static/images/step1.png" alt="Step 1" style="width:400px; height:auto;">
+
+        <h3>Step 2: Open Export Options</h3>
+        <p>Click the three dots (<code>...</code>) in the top-right corner.</p>
+        <img src="/static/images/step2.png" alt="Step 2" style="width:400px; height:auto;">
+
+        <h3>Step 3: Select Export</h3>
+        <p>From the menu, choose <strong>Export</strong>.</p>
+        <img src="/static/images/step3.png" alt="Step 3" style="width:400px; height:auto;">
+
+        <h3>Step 4: Configure Export Settings</h3>
+        <ul>
+            <p>Set "Between term and definition" to <strong>Tab</strong> and "Between Rows" to <strong>;;</strong>.</p>
+        </ul>
+        <img src="/static/images/step4.png" alt="Step 4" style="width:400px; height:auto;">
+
+        <div>
+            <p style="color:black;">___</p>
+        </div>
         <button id="closeTutBtn" class="exitButton">Close</button>
     </dialog>
+
 
     <script>
          // Get popup flags from Flask
