@@ -31,7 +31,6 @@ To run the project safely, it's recommended to use a Python virtual environment:
 1. **Create and activate a virtual environment**
 
 ```bash
-python3 -m venv env
 source env/bin/activate      # On Windows, use: `.\env\Scripts\activate`
 ```
 
