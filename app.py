@@ -2,9 +2,6 @@ from flask import Flask, render_template, redirect, url_for, request, send_file
 
 app = Flask(__name__)
 
-#source env/bin/activate
-#pip install Flask
-
 #write file function
 def write_file(file_path, content):
     with open(file_path, "w") as file:
